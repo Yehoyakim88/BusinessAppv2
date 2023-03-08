@@ -15,12 +15,98 @@
   </mat-drawer>
   
   <div class="example-sidenav-content">
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <mat-icon class="menuIcon" (click)="drawer.toggle()">menu</mat-icon>
-        <span>Simple CRM</span>
-      </mat-toolbar-row>
-    </mat-toolbar>
+        <mat-card class="myToolbar">
+          <!-- <button class="searchButtonToolbar" mat-raised-button (click)="initiateSearch()">
+            <mat-icon>search</mat-icon>
+            <span>Search</span>
+          </button> -->
+          <div id="toolbar-components" class="toolbarComponents">
+            <button class="searchButtonToolbar" mat-button (click)="initiateSearch()">
+              <mat-icon>search</mat-icon>
+              <span>Search</span>
+            </button>
+            <div class="toolbarRightElements">
+              <span class="material-icons color-697a8d cursor-pointer mr-8px">language</span>
+              <span class="material-icons-outlined color-697a8d cursor-pointer mr-8px"
+              #tooltip="matTooltip"
+              matTooltip="Dark mode"
+              [matTooltipPosition]="position.value">dark_mode</span>
+              <div class="gridDropDown">
+                <span (click)="checkVisited()" class="material-icons-outlined color-697a8d cursor-pointer mr-8px">grid_view</span>
+                <!-- <div id="shortcuts-container" class="shortcutsContainer" [class.show] = "isVisited"> -->
+                  <mat-card id="shortcuts-container" class="shortcutsContainer" [class.show] = "isVisited">
+                    <div class="shortcutsHeader">
+                      <span class="color-697a8d">Shortcuts</span>
+                      <span class="plusButton material-icons-outlined color-697a8d"
+                      #tooltip="matTooltip"
+                      matTooltip="Add shortcuts"
+                      [matTooltipPosition]="below.value">add_circle_outline</span>
+                    </div>
+                    <div class="shortcutsContent">
+                      <div class="shortcutsRow">
+                        <div class="shortcutElement br-1px">
+                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>calendar_month</mat-icon>
+                          </button>
+                          <span class="color-697a8d font-size-14px bold">Calendar</span>
+                          <span class="color-a1acb8 font-size-12px">Appointments</span>
+                        </div>
+                        <div class="shortcutElement">
+                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>manage_accounts</mat-icon>
+                          </button>
+                          <span class="color-697a8d font-size-14px bold">Invoice App</span>
+                          <span class="color-a1acb8 font-size-12px">Manage Accounts</span>
+                        </div>
+                      </div>
+                      <div class="shortcutsRow">
+                        <div class="shortcutElement br-1px">
+                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>person_outline</mat-icon>
+                          </button>
+                          <span class="color-697a8d font-size-14px bold">User App</span>
+                          <span class="color-a1acb8 font-size-12px">Manage Users</span>
+                        </div>
+                        <div class="shortcutElement">
+                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>verified_user</mat-icon>
+                          </button>
+                          <span class="color-697a8d font-size-14px bold">Role Management</span>
+                          <span class="color-a1acb8 font-size-12px">Permission</span>
+                        </div>
+                      </div>
+                      <div class="shortcutsRow">
+                        <div class="shortcutElement br-1px">
+                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>space_dashboard</mat-icon>
+                          </button>
+                          <span class="color-697a8d font-size-14px bold">Dashboard</span>
+                          <span class="color-a1acb8 font-size-12px">User Profile</span>
+                        </div>
+                        <div class="shortcutElement">
+                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>settings</mat-icon>
+                          </button>
+                          <span class="color-697a8d font-size-14px bold">Setting</span>
+                          <span class="color-a1acb8 font-size-12px">Account Settings</span>
+                        </div>
+                      </div>
+                    </div>
+                  </mat-card>
+                <!-- </div> -->
+              </div>
+              <span class="material-icons-outlined color-697a8d cursor-pointer mr-8px">notifications</span>
+              <img class="toolbarAvatar cursor-pointer mr-16px" src="./../assets/img/jd.jpeg">
+            </div>
+          </div>
+
+          <div id="searchbar-components" class="searchBarComponents d-none">
+            <input class="searchInputFieldToolbar" type="text" placeholder="Search...">
+            <span (click)="closeSearch()" class="material-icons color-697a8d cursor-pointer">close</span>
+          </div>
+          
+          
+        </mat-card>
     <div class="routerContainer">
       <router-outlet></router-outlet>
     </div>

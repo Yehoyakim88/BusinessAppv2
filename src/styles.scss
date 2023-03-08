@@ -10,6 +10,10 @@ body
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
+.pos-relative {
+    position:  relative !important;
+}
+
 .mt-32px {
     margin-top: 32px;
 }
@@ -18,12 +22,32 @@ body
     margin-bottom: 8px !important;
 }
 
+.mb-16px {
+    margin-bottom: 16px !important;
+}
+
+.ml-8px {
+    margin-left: 8px !important;
+}
+
+.mr-8px {
+    margin-right: 8px !important;
+}
+
 .mt-16px {
     margin-top: 16px !important;
 }
 
 .mr-16 {
     margin-right: 16px;
+}
+
+.ml-16px {
+    margin-left: 16px !important;
+}
+
+.mr-16px {
+    margin-right: 16px !important;
 }
 
 .mr-48px {
@@ -57,4 +81,32 @@ body
     --userActive: #42D690;
     --userInactive: #FF0040;
     --userPending: #F8B958;
+}
+
+.color-697a8d {
+    color:#697a8d !important;
+}
+
+.color-a1acb8 {
+    color: #a1acb8 !important;
+}
+
+.font-size-12px {
+    font-size: 12px !important;
+}
+
+.font-size-16px {
+    font-size: 16px !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.br-1px {
+    border-right: 1px solid #D9DEE2;
 }
