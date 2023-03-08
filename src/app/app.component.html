@@ -1,0 +1,28 @@
+<mat-drawer-container class="mat-drawer-container" autosize>
+  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
+    <div class="logoContainer">
+      <img class="sideNavLogoImage"src="./../assets/img/LogoMakr-2wE8sY.png">
+    </div>
+    <ul class="menuItems">
+      <li [routerLink]="['/']" routerLinkActive="router-link-active"><mat-icon>dashboard</mat-icon>Dashboard</li>
+      <li [routerLink]="['/user']" routerLinkActive="router-link-active"><mat-icon>perm_identity</mat-icon>User</li>
+      <li [routerLink]="['/contact']" routerLinkActive="router-link-active" ><mat-icon>email</mat-icon>Contact</li>
+    </ul>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+  
+  <div class="example-sidenav-content">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <mat-icon class="menuIcon" (click)="drawer.toggle()">menu</mat-icon>
+        <span>Simple CRM</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="routerContainer">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-drawer-container>

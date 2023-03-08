@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body 
+{ 
+    height: 100%; 
+}
+
+body 
+{ 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.mt-32px {
+    margin-top: 32px;
+}
+
+.mb-8px {
+    margin-bottom: 8px !important;
+}
+
+.mt-16px {
+    margin-top: 16px !important;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.mr-48px {
+    margin-right: 48px;
+}
+
+.padding-8px {
+    padding: 8px;
+}
+
+.pinRightUpperCorner {
+    position: absolute !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.flex-direction-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+:root {
+    --userActive: #42D690;
+    --userInactive: #FF0040;
+    --userPending: #F8B958;
+}
