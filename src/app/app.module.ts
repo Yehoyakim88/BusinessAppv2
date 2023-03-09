@@ -34,6 +34,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 
 
@@ -74,7 +76,8 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     MatPaginatorModule,
     MatChipsModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatRadioModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},

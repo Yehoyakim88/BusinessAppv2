@@ -1,6 +1,6 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
-  <!-- <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
-    <div class="logoContainer">
+  <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
+    <!-- <div class="logoContainer">
       <img class="sideNavLogoImage"src="./../assets/img/LogoMakr-2wE8sY.png">
     </div>
     <ul class="menuItems">
@@ -8,47 +8,59 @@
       <li [routerLink]="['/user']" routerLinkActive="router-link-active"><mat-icon>perm_identity</mat-icon>User</li>
       <li [routerLink]="['/contact']" routerLinkActive="router-link-active" ><mat-icon>email</mat-icon>Contact</li>
     </ul>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-  </mat-drawer> -->
-  <ul class="sideNavigation">
-    <li class="menuItem color-697a8d"></li>
-    <li class="menuItem color-697a8d"></li>
-    <li class="menuItem color-697a8d"></li>
-    <li class="menuItem color-697a8d"></li>
-    <li class="menuItem color-697a8d"></li>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
+    <ul class="sideNavigation">
+      
+      <li (click)="toggleSubMenuDashboards()" class="menuItem color-697a8d">
+        <div class="align-items-center"><span class="material-icons mr-8px">home</span>Dashboards</div>
+        <div class="align-items-center"><span id="dashboard-arrow" class="material-icons ml-48px">chevron_right</span></div>
+      </li>
+      <ul id="sub-menu-dashboards" class="subMenu" [class.show] = "subMenuDashboard">
+        <li class="menuItem color-697a8d">Analytics</li>
+        <li class="menuItem color-697a8d">CRM</li>
+        <li class="menuItem color-697a8d">eCommerce</li>
+      </ul>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">space_dashboards</span><span class="ml-minus-24px">Layouts</span></li>
 
-    <li class="menuHeader color-697a8d text-uppercase"></li>
+      <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Apps & Pages</span></li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">email</span>Email</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">chat_bubble_outline</span>Chat</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">calendar_month</span>Calendar</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">view_kanban</span>Kanban</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">receipt_long</span>Invoice</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">people</span>Users</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">verified_user</span>Roles & Permissions</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">web</span>Pages</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">lock_open</span>Authentications</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">dvr</span>Wizard Examples</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">open_in_browser</span>Modal Examples</li>
 
-    <li class="menuItem color-697a8d"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
+      <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Components</span></li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">content_copy</span>Cards</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">desktop_windows</span>User Interface</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">web_stories</span>Extended UI</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">emoji_emotions</span>Icons</li>
 
-    <li class="menuHeader"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-    <li class="menuItem"></li>
-  </ul>
+      <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Forms & Tablets</span></li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">list_alt</span>Form Elements</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">format_shapes</span>Form Layouts</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">video_settings</span>Form Wizard</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">fact_check</span>Form Validation</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">table_chart</span>Tables</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">analytics</span>Datatables</li>
+
+      <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Charts & Maps</span></li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">trending_up</span>Charts</li>
+      <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">map</span>Leaflet Maps</li>
+
+      <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Misc</span></li>
+      <li class="menuItem color-697a8d"><span class="material-icons mr-8px">home</span>Support</li>
+      <li class="menuItem color-697a8d"><span class="material-icons mr-8px">headset_mic</span>Documentation</li>
+  
+      
+    </ul>
+  </mat-drawer>
+  
   
   <div class="example-sidenav-content">
         <mat-card class="myToolbar">
@@ -81,14 +93,14 @@
                     <div class="shortcutsContent">
                       <div class="shortcutsRow">
                         <div class="shortcutElement br-1px">
-                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                          <button class="mb-8px" mat-fab color="primary">
                             <mat-icon>calendar_month</mat-icon>
                           </button>
                           <span class="color-697a8d font-size-14px bold">Calendar</span>
                           <span class="color-a1acb8 font-size-12px">Appointments</span>
                         </div>
                         <div class="shortcutElement">
-                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                          <button class="mb-8px" mat-fab color="primary">
                             <mat-icon>manage_accounts</mat-icon>
                           </button>
                           <span class="color-697a8d font-size-14px bold">Invoice App</span>
@@ -104,7 +116,7 @@
                           <span class="color-a1acb8 font-size-12px">Manage Users</span>
                         </div>
                         <div class="shortcutElement">
-                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                          <button class="mb-8px" mat-fab color="primary">
                             <mat-icon>verified_user</mat-icon>
                           </button>
                           <span class="color-697a8d font-size-14px bold">Role Management</span>
@@ -113,14 +125,17 @@
                       </div>
                       <div class="shortcutsRow">
                         <div class="shortcutElement br-1px">
-                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
-                            <mat-icon>space_dashboard</mat-icon>
+                          <button class="mb-8px" mat-fab color="primary">   
+                            <!-- for another color, simply delete color="primary" and set another on in .scss file
+                            using .mat-mdc-fab.mat-primary, .mat-mdc-mini-fab.mat-primary {
+                            --mdc-fab-container-color: #HEXCOLOR -->
+                            <mat-icon>space_dashboard</mat-icon> 
                           </button>
                           <span class="color-697a8d font-size-14px bold">Dashboard</span>
                           <span class="color-a1acb8 font-size-12px">User Profile</span>
                         </div>
                         <div class="shortcutElement">
-                          <button class="mb-8px" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                          <button class="mb-8px" mat-fab color="primary">
                             <mat-icon>settings</mat-icon>
                           </button>
                           <span class="color-697a8d font-size-14px bold">Setting</span>

@@ -14,6 +14,7 @@ export class AppComponent {
   position = new FormControl(this.positionOptions[0]);
   below = new FormControl(this.positionOptions[1]);
   public isVisited = false; 
+  public subMenuDashboard = false;
 
   initiateSearch() {
     let searchBar : HTMLElement = document.getElementById('searchbar-components') as HTMLElement;
@@ -33,5 +34,17 @@ export class AppComponent {
     console.log('Calling function checkVisited()');
     this.isVisited = !this.isVisited;
     console.log('isVisited: ', this.isVisited);
+  }
+
+  toggleSubMenuDashboards() {
+    console.log('Calling toggleSubMenuDashboard()');
+    this.subMenuDashboard = !this.subMenuDashboard;
+    let dashboardArrow : HTMLElement = document.getElementById('dashboard-arrow') as HTMLElement;
+    if(this.subMenuDashboard) {
+      dashboardArrow.style.transform = 'rotate(90deg)';
+    }
+    else {
+      dashboardArrow.style.transform = 'rotate(0deg)';
+    }
   }
 }
