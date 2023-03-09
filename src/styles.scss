@@ -10,6 +10,27 @@ body
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #4B47FF, #00BEE8);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    filter:brightness(1.5) 
+  }
+
 .pos-relative {
     position:  relative !important;
 }
@@ -62,6 +83,10 @@ body
     margin-right: 16px !important;
 }
 
+.mr-24px {
+    margin-right: 24px !important;
+}
+
 .mr-48px {
     margin-right: 48px;
 }
@@ -102,6 +127,14 @@ body
 
 .color-a1acb8 {
     color: #a1acb8 !important;
+}
+
+.bg-color-696cff {
+    color: #696cff !important;
+}
+
+.color-70dc38 {
+    color: #70dc38;
 }
 
 .font-size-12px {

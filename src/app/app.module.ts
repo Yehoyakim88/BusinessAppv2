@@ -35,6 +35,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
 
@@ -77,7 +80,10 @@ import {MatRadioModule} from '@angular/material/radio';
     MatChipsModule,
     MatCardModule,
     MatMenuModule,
-    MatRadioModule
+    MatRadioModule,
+    NgApexchartsModule,
+    NgCircleProgressModule,
+    NgScrollbarModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},
