@@ -7,11 +7,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserComponent } from './user/user.component';
-import { ContactComponent } from './contact/contact.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { DialogAddUserComponent } from './dialog-add-user/dialog-add-user.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -30,28 +27,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
-import { UserDetailComponent } from './user-detail/user-detail.component';
 import {MatMenuModule} from '@angular/material/menu';
-import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
-import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import {MatRadioModule} from '@angular/material/radio';
-import { NgApexchartsModule } from 'ng-apexcharts';
-import { NgCircleProgressModule } from 'ng-circle-progress';
-import { NgScrollbarModule } from 'ngx-scrollbar';
-
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    UserComponent,
-    ContactComponent,
-    DialogAddUserComponent,
-    UserDetailComponent,
-    DialogEditAddressComponent,
-    DialogEditUserComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -80,10 +63,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     MatChipsModule,
     MatCardModule,
     MatMenuModule,
-    MatRadioModule,
-    NgApexchartsModule,
-    NgCircleProgressModule,
-    NgScrollbarModule
+    MatRadioModule    
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'de'},
