@@ -24829,3 +24829,38 @@ a.bg-vimeo:focus {
 .footer.bg-lighter hr {
   border-color: rgba(105, 122, 141, 0.076604902);
 }
+
+@media (max-width: 1417px) {
+  .col-lg-8 {
+    width: 25vw !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboardMain {
+    flex-direction: column !important;
+  }
+
+  .dashboardRowOne {
+    flex-direction: column !important;
+  }
+
+  .dashboardRowTwo {
+    flex-direction: column !important;
+  }
+
+  .card {
+    width: 55vw !important;
+  }
+
+  .mobile {
+    margin-top: 32px !important;
+    margin-left: 0px !important; 
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboardMain {
+    align-items: center !important;
+  }
+}

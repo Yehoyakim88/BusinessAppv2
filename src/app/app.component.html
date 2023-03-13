@@ -61,6 +61,9 @@
             <span>Search</span>
           </button> -->
           <div id="toolbar-components" class="toolbarComponents">
+            <button class="openMenuButton" mat-button (click)="openMenu()">
+              <mat-icon>menu</mat-icon>
+            </button>
             <button class="searchButtonToolbar" mat-button (click)="initiateSearch()">
               <mat-icon>search</mat-icon>
               <span>Search</span>
@@ -153,3 +156,56 @@
     </div>
   </div>
 </mat-drawer-container>
+
+<div class="mobileMenu" [class.show] = "menuOpened">
+  <ul class="sideNavigation justify-content-center">
+      
+    <li (click)="toggleSubMenuDashboards()" class="menuItem color-697a8d">
+      <div class="align-items-center"><span class="material-icons mr-8px">home</span>Dashboards</div>
+      <div class="align-items-center"><span id="dashboard-arrow" class="material-icons ml-48px">chevron_right</span></div>
+    </li>
+    <ul id="sub-menu-dashboards" class="subMenu">
+      <li class="menuItem color-697a8d">Analytics</li>
+      <li class="menuItem color-697a8d">CRM</li>
+      <li class="menuItem color-697a8d">eCommerce</li>
+    </ul>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">space_dashboards</span><span class="ml-minus-24px">Layouts</span></li>
+
+    <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Apps & Pages</span></li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">email</span>Email</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">chat_bubble_outline</span>Chat</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">calendar_month</span>Calendar</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">view_kanban</span>Kanban</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">receipt_long</span>Invoice</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">people</span>Users</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">verified_user</span>Roles & Permissions</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">web</span>Pages</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">lock_open</span>Authentications</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">dvr</span>Wizard Examples</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">open_in_browser</span>Modal Examples</li>
+
+    <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Components</span></li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">content_copy</span>Cards</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">desktop_windows</span>User Interface</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">web_stories</span>Extended UI</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">emoji_emotions</span>Icons</li>
+
+    <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Forms & Tablets</span></li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">list_alt</span>Form Elements</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">format_shapes</span>Form Layouts</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">video_settings</span>Form Wizard</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">fact_check</span>Form Validation</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">table_chart</span>Tables</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">analytics</span>Datatables</li>
+
+    <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Charts & Maps</span></li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">trending_up</span>Charts</li>
+    <li class="menuItem color-697a8d"><span class="material-icons-outlined mr-8px">map</span>Leaflet Maps</li>
+
+    <li class="menuHeader color-697a8d text-uppercase"><span class="material-icons-outlined">horizontal_rule</span><span>Misc</span></li>
+    <li class="menuItem color-697a8d"><span class="material-icons mr-8px">home</span>Support</li>
+    <li class="menuItem color-697a8d"><span class="material-icons mr-8px">headset_mic</span>Documentation</li>
+
+    
+  </ul>
+</div>

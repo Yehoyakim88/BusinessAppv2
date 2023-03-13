@@ -14,6 +14,7 @@ export class AppComponent {
   position = new FormControl(this.positionOptions[0]);
   below = new FormControl(this.positionOptions[1]);
   public isVisited = false; 
+  public menuOpened = false;
   public subMenuDashboard = false;
 
   initiateSearch() {
@@ -46,5 +47,9 @@ export class AppComponent {
     else {
       dashboardArrow.style.transform = 'rotate(0deg)';
     }
+  }
+
+  openMenu() {
+    this.menuOpened = !this.menuOpened;
   }
 }

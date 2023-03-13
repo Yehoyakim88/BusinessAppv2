@@ -13,6 +13,33 @@ mat-toolbar-row {
   margin-right: 16px;
 }
 
+.mobileMenu {
+  display: none;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 4.25rem;
+  left: 0px;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-fill-available;
+  overflow-y: scroll;
+  height: 90vh;
+  font-size: 32px !important;
+
+  .material-icons {
+    font-size: 32px !important;
+  }
+
+  .material-icons-outlined {
+    font-size: 32px !important;
+  }
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
 mat-drawer-container {
   height: 100vh !important;
 }
@@ -89,6 +116,15 @@ mat-drawer-container {
     object-fit: cover;
     border-radius: 100%;
     border: none !important;
+}
+
+.openMenuButton {
+  display: none;
+  .mat-icon {
+    font-size: 32px;
+    width: 2rem !important;
+    height: 2rem !important;
+  }
 }
 
 .searchButtonToolbar {
@@ -177,6 +213,20 @@ mat-drawer-container {
 
 .d-none {
     display: none !important;
+}
+
+@media (max-width: 700px) {
+  .sidenav {
+    display: none !important;
+  }
+
+  .openMenuButton {
+    display: flex !important;
+  }
+
+  .menuItem {
+    height: 80px !important;
+  }
 }
 
 
